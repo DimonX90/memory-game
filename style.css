@@ -1,0 +1,307 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	background-color: transparent;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+input::-webkit-input-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+input::-moz-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+input:-moz-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+input:-ms-input-placeholder {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+input:focus::-webkit-input-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+input:focus::-moz-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+input:focus:-moz-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+input:focus:-ms-input-placeholder {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+/* ================================================================================== */
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px 20px 50px 20px;
+}
+.wrapper-bloks {
+	display: grid;
+	grid-template: 1fr / repeat(4, auto);
+	grid-auto-flow: row;
+	gap: 5px;
+	justify-content: center;
+	padding-top: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.item {
+	border-radius: 20px;
+	display: block;
+	width: 100px;
+	height: 100px;
+	background: url("/img/iconsquestion.png") 0 0 / contain no-repeat;
+	background-color: red;
+	transition: all 2s ease 0s;
+	padding: 5px;
+	opacity: 0;
+	visibility: hidden;
+}
+._active {
+	transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+	-webkit-transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+}
+
+#facebook._active {
+	background: url("/img/free-icon-facebook-1077041.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+}
+#instagramm._active {
+	background: url("/img/free-icon-instagram-1077042.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+}
+#pinterest._active {
+	background: url("/img/free-icon-pinterest-160178.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+}
+#telegramm._active {
+	background: url("/img/telegram.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+}
+#tiktok._active {
+	background: url("/img/free-icon-tik-tok-1946552.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+}
+#twitter._active {
+	background: url("/img/free-icon-twitter-160194.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+}
+#viber._active {
+	background: url("/img/free-icon-viber-408822.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+}
+#whatsup._active {
+	background: url("/img/free-icon-whatsapp-1077055.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+}
+
+#facebook._noneactive {
+	background: url("/img/free-icon-facebook-1077041.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+	transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+	-webkit-transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+}
+#instagramm._noneactive {
+	background: url("/img/free-icon-instagram-1077042.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+	transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+	-webkit-transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+}
+#pinterest._noneactive {
+	background: url("/img/free-icon-pinterest-160178.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+	transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+	-webkit-transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+}
+#telegramm._noneactive {
+	background: url("/img/telegram.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+	transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+	-webkit-transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+}
+#tiktok._noneactive {
+	background: url("/img/free-icon-tik-tok-1946552.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+	transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+	-webkit-transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+}
+#twitter._noneactive {
+	background: url("/img/free-icon-twitter-160194.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+	transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+	-webkit-transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+}
+#viber._noneactive {
+	background: url("/img/free-icon-viber-408822.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+	transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+	-webkit-transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+}
+#whatsup._noneactive {
+	background: url("/img/free-icon-whatsapp-1077055.png") 0 0 / contain no-repeat;
+	border: 2px solid red;
+	transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+	-webkit-transform: matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1);
+}
+
+h1 {
+	font-size: 40px;
+}
+@media (max-width: 480px) {
+	.item {
+		width: 73px;
+		height: 73px;
+	}
+	h1 {
+		font-size: 30px !important;
+	}
+}
+.start {
+	border: 2px solid #000000;
+	padding: 4px 40px 4px 40px;
+	font-size: 50px;
+	border-radius: 20px;
+	font-weight: 700;
+	background-color: gold;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transition: all 0.5s ease 0s;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.again {
+	border: 2px solid #000000;
+	padding: 4px 20px 4px 20px;
+	font-size: 20px;
+	border-radius: 20px;
+	font-weight: 700;
+	background-color: gold;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transition: all 0.5s ease 0s;
+}
+.start:hover {
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+.start:active {
+	background-color: greenyellow;
+}
+p {
+	font-size: 30px;
+	font-weight: 700;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.win {
+	border: 2px solid greenyellow;
+	background-color: #ffffff;
+	padding: 5px 30px 5px 30px;
+	border-radius: 20px;
+	position: absolute;
+	top: -500%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10000;
+	transition: all 0.5s ease 0s;
+}
+
+.win._active {
+	top: 50%;
+}
+._show {
+	transition: all 1s ease 0s;
+	opacity: 1;
+	visibility: visible;
+}
