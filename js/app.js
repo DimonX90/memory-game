@@ -1,11 +1,11 @@
 "use strict"
 
-let nonActive = 0;
+
 const win = document.querySelector('.win');
 const playAgain = document.querySelector('.again');
 const wrapperBloks = document.querySelector('.wrapper-bloks')
 const play = document.querySelector('.start');
-
+let nonActive = 0;
 
 
 const ids = ['facebook', 'facebook', 'twitter', 'twitter', 'viber', 'viber', 'instagramm', 'instagramm', 'telegramm', 'telegramm', 'whatsup', 'whatsup', 'pinterest', 'pinterest', 'tiktok', 'tiktok']
@@ -24,6 +24,7 @@ play.addEventListener('click', function () {
 
 playAgain.addEventListener('click', function () {
 	wrapperBloks.innerHTML = '';
+	nonActive = 0;
 	win.classList.remove('_active')
 	shuffle(ids);
 	addBlocks(ids);
@@ -41,6 +42,7 @@ function playGame(btns) {
 			if (!btns[i].classList.contains('_active')) {
 				btns[i].classList.add('_active');
 			}
+
 			chek(btns, i);
 			if (nonActive == btns.length) {
 				win.classList.add('_active')
